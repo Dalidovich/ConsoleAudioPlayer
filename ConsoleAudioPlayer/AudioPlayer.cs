@@ -253,7 +253,7 @@ namespace ConsoleAudioPlayer
         {
             await PlayerSettigsController.CreateOutSettings();
             await PlayerSettigsController.Init();
-            Console.WriteLine(ValueBufferTemplate.StartPlayListStates);
+            
             ChangeSelectMusicFile();
             var controlSettingsTask = Task.Factory.StartNew(ControlSettingsLoop, cancellationTokenSource.Token);
 
