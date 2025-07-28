@@ -4,6 +4,7 @@
     {
         public static int StandartSkipValue { get; set; } = 25;
         public static float StandartVolumeValue { get; set; } = 0.1f;
+        public static int StartPlayListStates { get; set; } = 1;
 
         public static int BoundOfSelectedFile { get; set; } = 15;
         public static int ConsoleRefreshRate { get; set; } = 250;

@@ -10,6 +10,8 @@
 
         public bool? ApplyContextMenu { get; set; }
 
+        public int? StartPlayListStates { get; set; }
+
         public ConsoleKey? SkipForwardKey { get; set; }
         public ConsoleKey? SkipBackKey { get; set; }
         public ConsoleKey? VolumeUpKey { get; set; }
@@ -20,6 +22,5 @@
         public ConsoleKey? NextKey { get; set; }
         public ConsoleKey? PreviousKey { get; set; }
         public ConsoleKey? PlaylistStateKey { get; set; }
-
     }
 }

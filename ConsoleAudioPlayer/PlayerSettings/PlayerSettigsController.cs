@@ -41,6 +41,7 @@ namespace ConsoleAudioPlayer.PlayerSettings
                 {
                     ValueBufferTemplate.StandartVolumeValue = settings.VolumeValue ?? ValueBufferTemplate.StandartVolumeValue;
                     ValueBufferTemplate.StandartSkipValue = settings.SkipValue ?? ValueBufferTemplate.StandartSkipValue;
+                    ValueBufferTemplate.StartPlayListStates = settings.StartPlayListStates ?? ValueBufferTemplate.StartPlayListStates;
 
                     ValueBufferTemplate.BoundOfSelectedFile = settings.BoundOfSelectedFile ?? ValueBufferTemplate.BoundOfSelectedFile;
                     ValueBufferTemplate.ConsoleRefreshRate = settings.ConsoleRefreshRate ?? ValueBufferTemplate.ConsoleRefreshRate;

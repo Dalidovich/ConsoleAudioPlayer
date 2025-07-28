@@ -25,7 +25,7 @@ namespace ConsoleAudioPlayer
         public AudioPlayer(string filePath)
         {
             MusicFileSelector = 0;
-            PlayListState = 0;
+            PlayListState = ValueBufferTemplate.StartPlayListStates;
 
             IOFileWork(filePath);
 
@@ -253,7 +253,7 @@ namespace ConsoleAudioPlayer
         {
             await PlayerSettigsController.CreateOutSettings();
             await PlayerSettigsController.Init();
-
+            Console.WriteLine(ValueBufferTemplate.StartPlayListStates);
             ChangeSelectMusicFile();
             var controlSettingsTask = Task.Factory.StartNew(ControlSettingsLoop, cancellationTokenSource.Token);
 
