@@ -1,4 +1,5 @@
 ﻿using ConsoleAudioPlayer.Buffers;
+using NAudio.Wave;
 
 namespace ConsoleAudioPlayer.VisualizeComponent
 {
@@ -13,6 +14,7 @@ namespace ConsoleAudioPlayer.VisualizeComponent
             Player = audioPlayer;
             VolumeBar = new VisualLoadBar(10, 1);
             DurationBar = new VisualLoadBar(10, Player.Reader.TotalTime.TotalSeconds, false);
+            Console.CursorVisible = false;
         }
 
         public void InitBars()
@@ -22,7 +24,6 @@ namespace ConsoleAudioPlayer.VisualizeComponent
 
         public async Task VisualizeTotal()
         {
-            Console.CursorVisible = false;
             Console.SetCursorPosition(0, 0);
 
             Write(VisualizeUnselectedMusicFiles());
@@ -41,7 +42,9 @@ namespace ConsoleAudioPlayer.VisualizeComponent
             {
                 Console.SetCursorPosition(0, Player.MusicFileSelector - ValueBufferTemplate.BoundOfSelectedFile);
             }
-            Console.Title = Player.MusicFiles[Player.MusicFileSelector].ToString();
+            Console.Title = $"{Player.MusicFiles[Player.MusicFileSelector].ToString()} " +
+                $"({(Player.WaveOut.PlaybackState == PlaybackState.Playing?"play":"pause")})";
+
             await Task.Delay(ValueBufferTemplate.ConsoleRefreshRate);
         }
 
