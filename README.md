@@ -1,6 +1,9 @@
 # ConsoleAudioPlayer - Консольный аудиоплеер
 
-
+<p align="center">
+  <img src="./ConsoleAudioPlayer/1-39_icon-icons.com_69190.ico" alt="иконка ConsoleAudioPlayer">
+</p>
+<div align="left">
 
 Консольный аудиоплеер с поддержкой MP3 и WAV файлов, возможностью управления через горячие клавиши и визуализацией в консоли.
 
